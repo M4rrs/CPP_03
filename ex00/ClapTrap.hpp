@@ -1,0 +1,29 @@
+#pragma once
+#ifndef CLAPTRAP_HPP
+#define CLAPTRAP_HPP
+
+#include <iostream>
+
+class ClapTrap {
+
+	private:
+		std::string _name;
+		unsigned int	_hp;
+		unsigned int _ep;
+		int _attk;
+
+	public:
+		ClapTrap( void );
+		ClapTrap( std::string name );
+		ClapTrap( const ClapTrap &copy );
+		ClapTrap &operator=( const ClapTrap &assign );
+		~ClapTrap();
+
+		void attack( const std::string &target ); 
+		void takeDamage( unsigned int amount );
+		void beRepaired( unsigned int amount );
+
+
+};
+
+#endif
