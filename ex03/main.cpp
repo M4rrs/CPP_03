@@ -47,5 +47,6 @@ int main( void )
 	// c.highFivesGuys();
 	
 	// std::cout << "\n[ DESTRUCTING ]" << std::endl;
-	DiamondTrap a;
+	DiamondTrap a("bob");
+	DiamondTrap b;
 }

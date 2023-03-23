@@ -5,7 +5,7 @@
 #include "ClapTrap.hpp"
 #define SCAV "\033[33mSCAVTRAP \033[0m"
 
-class ScavTrap : public ClapTrap {
+class ScavTrap : virtual public ClapTrap {
 
 	public:
 		ScavTrap( void );

@@ -8,7 +8,7 @@
 
 #define DIA "\033[32mDIAMONDTRAP \033[0m"
 
-class	DiamondTrap : public ClapTrap, public ScavTrap, public FragTrap {
+class	DiamondTrap : public ClapTrap {
 	private:
 		std::string _name;
 		

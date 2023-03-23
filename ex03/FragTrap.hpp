@@ -5,7 +5,7 @@
 #include "ClapTrap.hpp"
 #define FRAG "\033[35mFRAGTRAP \033[0m"
 
-class FragTrap : public ClapTrap {
+class FragTrap : virtual public ClapTrap {
 	public:
 	FragTrap( void );
 	FragTrap( std::string name );
