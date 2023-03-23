@@ -6,7 +6,12 @@
 #include "FragTrap.hpp"
 #include "ClapTrap.hpp"
 
-class	DiamondTrap : public ScavTrap, public FragTrap {
+#define DIA "\033[32mDIAMONDTRAP \033[0m"
+
+class	DiamondTrap : public ClapTrap, public ScavTrap, public FragTrap {
+	private:
+		std::string _name;
+		
 	public:
 		DiamondTrap( void );
 		DiamondTrap( std::string name );
