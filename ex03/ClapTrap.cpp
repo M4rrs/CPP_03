@@ -4,25 +4,25 @@
 
 ClapTrap::ClapTrap( void ) : _name("nameless"), _hp(10), _ep(10), _attk(0) {
 	_maxHP = _hp;
-	std::cout << "Claptrap " + _name + " constructed." << std::endl;
+	std::cout << CLAP + _name + " constructed." << std::endl;
 }
 
 ClapTrap::ClapTrap( std::string name ) : _name(name), _hp(10), _ep(10), _attk(0) {
 	_maxHP = _hp;
-	std::cout << "ClapTrap " + _name + " constructed." << std::endl;
+	std::cout << CLAP + _name + " constructed." << std::endl;
 }
 
 /*=============== DESTRUCTOR ===============*/
 
 ClapTrap::~ClapTrap( void ) {
-	std::cout << "ClapTrap " + _name + " destructed." << std::endl;
+	std::cout << CLAP + _name + " destructed." << std::endl;
 }
 
 /*=============== COPY CONSTRUCTOR ===============*/
 
 ClapTrap::ClapTrap( const ClapTrap &copy ){
 	*this = copy;
-	std::cout << "ClapTrap copy constructor called." << std::endl;
+	std::cout << CLAP << "copy constructor called." << std::endl;
 }
 /*=============== OVERLOADED OPERATOR ===============*/
 
@@ -40,12 +40,12 @@ ClapTrap &ClapTrap::operator=( const ClapTrap &assign ){
 void ClapTrap::attack( const std::string &target ) {
 	if (_ep == 0)
 	{
-		std::cout << "ClapTrap " + _name + " is too tired to attack...";
+		std::cout << CLAP + _name + " is too tired to attack...";
 		return ;
 	}
 	if (_hp == 0)
 		return;
-	std::cout << "ClapTrap " + _name + " attacks " + target + ", causing "
+	std::cout << CLAP + _name + " attacks " + target + ", causing "
 			<< _attk << " points of damage!"
 			<< std::endl;
 	--_ep;
@@ -54,12 +54,12 @@ void ClapTrap::attack( const std::string &target ) {
 void ClapTrap::takeDamage( unsigned int amount ){
 	if (_hp == 0)
 		return ;
-	std::cout << "ClapTrap " + _name + " takes "
+	std::cout << CLAP + _name + " takes "
 			<< amount << " points of damage!"
 			<< std::endl;
 	if (amount >= _hp)
 	{
-		std::cout << "ClapTrap " + _name + " has been defeated."
+		std::cout << CLAP + _name + " has been defeated."
 				<< std::endl;
 	}
 	_hp -= amount;
@@ -68,25 +68,25 @@ void ClapTrap::takeDamage( unsigned int amount ){
 void ClapTrap::beRepaired( unsigned int amount ){
 	if (_ep == 0)
 	{
-		std::cout << "ClapTrap " + _name + " is too tired to heal..."
+		std::cout << CLAP + _name + " is too tired to heal..."
 				<< std::endl;
 		return ;
 	}
 	if (_hp == _maxHP)
 	{
-		std::cout << "ClapTrap " + _name + " is already at full health!"
+		std::cout << CLAP + _name + " is already at full health!"
 				<< std::endl;
 		return;
 	}
 	else if ((_hp + amount) >= _maxHP)
 	{
-		std::cout << "ClapTrap " + _name + " has been healed to full health!"
+		std::cout << CLAP + _name + " has been healed to full health!"
 				<< std::endl;
 		_hp = _maxHP;
 	}
 	else
 	{
-		std::cout << "ClapTrap " + _name + " is healing..."
+		std::cout << CLAP + _name + " is healing..."
 				<< std::endl;
 		_hp += amount;
 	}

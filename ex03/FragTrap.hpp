@@ -3,6 +3,7 @@
 #define FRAGTRAP_HPP
 
 #include "ClapTrap.hpp"
+#define FRAG "\033[35mFRAGTRAP \033[0m"
 
 class FragTrap : public ClapTrap {
 	public:

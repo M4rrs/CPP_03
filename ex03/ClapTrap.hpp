@@ -3,6 +3,7 @@
 #define CLAPTRAP_HPP
 
 #include <iostream>
+#define CLAP "\033[34mCLAPTRAP \033[0m"
 
 class ClapTrap {
 

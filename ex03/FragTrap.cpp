@@ -7,7 +7,7 @@ FragTrap::FragTrap( void ) : ClapTrap() {
 	_maxHP = _hp;
 	_ep = 100;
 	_attk = 30;
-	std::cout << "FragTrap " + _name + " constructed." << std::endl;
+	std::cout << FRAG + _name + " constructed." << std::endl;
 }
 
 FragTrap::FragTrap( std::string name ) : ClapTrap(name){
@@ -15,20 +15,20 @@ FragTrap::FragTrap( std::string name ) : ClapTrap(name){
 	_maxHP = _hp;
 	_ep = 100;
 	_attk = 30;
-	std::cout << "FragTrap " + _name + " constructed." << std::endl;
+	std::cout << FRAG + _name + " constructed." << std::endl;
 }
 
 /*=============== DESTRUCTOR ===============*/
 
 FragTrap::~FragTrap( void ){
-	std::cout << "FragTrap " + _name + " destructed." << std::endl;
+	std::cout << FRAG + _name + " destructed." << std::endl;
 }
 
 /*=============== COPY CONSTRUCTOR ===============*/
 
 FragTrap::FragTrap( const FragTrap &copy ){
 	*this = copy;
-	std::cout << "FragTrap copy constructor called." << std::endl;
+	std::cout << FRAG << "copy constructor called." << std::endl;
 }
 
 /*=============== OVERLOADED OPERATOR ===============*/
@@ -47,17 +47,17 @@ FragTrap &FragTrap::operator=( const FragTrap &assign ){
 void FragTrap::attack( const std::string &target ){
 	if (_ep == 0)
 	{
-		std::cout << "FragTrap " + _name + " is too tired to attack..."
+		std::cout << FRAG + _name + " is too tired to attack..."
 				<< std::endl;
 	}
 	if (_hp == 0)
 		return ;
-	std::cout << "FragTrap " + _name + " attacks " + target + ", causing "
+	std::cout << FRAG + _name + " attacks " + target + ", causing "
 			<< _attk << " points of damage!"
 			<< std::endl;
 	--_ep;
 }
 
 void FragTrap::highFivesGuys( void ){
-	std::cout << "FragTrap: High fives guys !" << std::endl;
+	std::cout << FRAG << "High fives guys !" << std::endl;
 }

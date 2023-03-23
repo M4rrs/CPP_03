@@ -1,11 +1,11 @@
-NAME = FragTrap
+NAME = DiamondTrap
 CC = c++
 FLAGS = -Wall -Werror -Wextra -I -std=c++98 -fsanitize=address
 
 RM = rm -rf
 
-SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
-INC = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
+SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
+INC = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp DiamondTrap.hpp
 
 OBJS = ${SRCS:%.cpp=%.o}
 
@@ -16,7 +16,7 @@ OBJS = ${SRCS:%.cpp=%.o}
 all: ${NAME}
 
 ${NAME}: ${OBJS}
-	@echo "\n\033[38;5;204mFragTrap\033[0m"
+	@echo "\n\033[38;5;204mDiamondTrap\033[0m"
 	@${CC} ${FLAGS} ${OBJS} -o $@
 
 clean:
