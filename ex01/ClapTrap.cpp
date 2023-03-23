@@ -20,9 +20,8 @@ ClapTrap::~ClapTrap( void ) {
 
 ClapTrap::ClapTrap( const ClapTrap &copy ){
 	*this = copy;
-	std::cout << "Copy Constructor called." << std::endl;
+	std::cout << CLAP << "copy constructor called." << std::endl;
 }
-
 /*=============== OVERLOADED OPERATOR ===============*/
 
 ClapTrap &ClapTrap::operator=( const ClapTrap &assign ){
@@ -71,17 +70,17 @@ void ClapTrap::beRepaired( unsigned int amount ){
 				<< std::endl;
 		return ;
 	}
-	if (_hp == 10)
+	if (_hp == _maxHP)
 	{
 		std::cout << CLAP + _name + " is already at full health!"
 				<< std::endl;
 		return;
 	}
-	else if ((_hp + amount) >= 10)
+	else if ((_hp + amount) >= _maxHP)
 	{
 		std::cout << CLAP + _name + " has been healed to full health!"
 				<< std::endl;
-		_hp = 10;
+		_hp = _maxHP;
 	}
 	else
 	{

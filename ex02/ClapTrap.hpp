@@ -3,12 +3,13 @@
 #define CLAPTRAP_HPP
 
 #include <iostream>
-
 #define CLAP "\033[34mCLAPTRAP \033[0m"
+
 class ClapTrap {
 
-	private:
+	protected:
 		std::string _name;
+		unsigned int	_maxHP;
 		unsigned int	_hp;
 		unsigned int _ep;
 		int _attk;
@@ -28,4 +29,3 @@ class ClapTrap {
 };
 
 #endif
-
