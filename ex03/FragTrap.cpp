@@ -3,7 +3,7 @@
 /*=============== CONSTRUCTOR ===============*/
 
 FragTrap::FragTrap( void ) : ClapTrap() {
-	_hp = 100;
+	_hp = 101;
 	_maxHP = _hp;
 	_ep = 100;
 	_attk = 30;
@@ -60,4 +60,14 @@ void FragTrap::attack( const std::string &target ){
 
 void FragTrap::highFivesGuys( void ){
 	std::cout << FRAG << "High fives guys !" << std::endl;
+}
+
+unsigned int FragTrap::getHP( void ) {
+	std::cout << "Frag hp: " << _hp << std::endl;
+	return (_hp);
+}
+
+int FragTrap::getATTK( void ) {
+	std::cout << "Frag attk: " << _attk << std::endl;
+	return (_attk);
 }
