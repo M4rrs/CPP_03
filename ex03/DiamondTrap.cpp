@@ -2,10 +2,10 @@
 /*=============== CONSTRUCTOR ===============*/
 
 DiamondTrap::DiamondTrap( void ) : ClapTrap("nameless_clap_name"), _name("nameless") {
-	_hp = FragTrap::getHP();
-	_maxHP = _hp;
-	_ep = ScavTrap::getEP();
-	_attk = FragTrap::getATTK();
+	this->_hp = FragTrap::_hp;
+	this->_maxHP = _hp;
+	this->_ep = ScavTrap::_ep;
+	this->_attk = FragTrap::_attk;
 
 	std::cout << "Diamond ATTK = " << DiamondTrap::_attk << std::endl;
 	std::cout << "Diamond EP = " << DiamondTrap::_ep << std::endl;

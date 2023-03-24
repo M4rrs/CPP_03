@@ -62,8 +62,3 @@ void ScavTrap::attack( const std::string &target ){
 			<< std::endl;
 	--_ep;
 }
-
-unsigned int ScavTrap::getEP( void ) {
-	std::cout << "Scav ep: " << _ep << std::endl;
-	return (_ep);
-}
