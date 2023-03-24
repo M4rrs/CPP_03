@@ -22,7 +22,7 @@ int main( void )
 	c.attack("Clap-bot");
 	a.takeDamage(50);
 	b.takeDamage(20);
-	c.takeDamage(7); //dies
+	c.takeDamage(7); 
 
 	a.beRepaired(20);
 

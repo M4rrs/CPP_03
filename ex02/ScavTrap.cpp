@@ -26,7 +26,7 @@ ScavTrap::~ScavTrap( void ){
 
 /*=============== COPY CONSTRUCTOR ===============*/
 
-ScavTrap::ScavTrap( const ScavTrap &copy ){
+ScavTrap::ScavTrap( const ScavTrap &copy ) : ClapTrap(copy) {
 	*this = copy;
 	std::cout << SCAV << "copy constructor called." << std::endl;
 }

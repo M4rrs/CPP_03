@@ -26,7 +26,7 @@ FragTrap::~FragTrap( void ){
 
 /*=============== COPY CONSTRUCTOR ===============*/
 
-FragTrap::FragTrap( const FragTrap &copy ){
+FragTrap::FragTrap( const FragTrap &copy ) : ClapTrap(copy) {
 	*this = copy;
 	std::cout << FRAG << "copy constructor called." << std::endl;
 }

@@ -19,17 +19,18 @@ int main( void )
 	c.takeDamage(70); //fragtrap max 100
 
 	std::cout << std::endl;
-	a.beRepaired(3);
+	a.beRepaired(3); //8
 	b.beRepaired(20); //heals to max
-	c.beRepaired(10);
+	c.beRepaired(10); //40
 
 	std::cout << "\n[ TESTING COPIES ]" << std::endl;
-	ClapTrap d(a); //7hp
+	ClapTrap d(a); //8hp
 	ScavTrap e(b); //full
 	FragTrap f(c); //40hp
 
 	std::cout << std::endl;
 	d.takeDamage(7); //should die
+	d.takeDamage(1); //should die
 	e.takeDamage(100); //dies
 	f.takeDamage(20); //does not die
 	std::cout << "[ END OF TEST COPIES ]" << std::endl;

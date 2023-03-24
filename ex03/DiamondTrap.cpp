@@ -11,10 +11,10 @@ DiamondTrap::DiamondTrap( void ) : ClapTrap("nameless_clap_name"), _name("namele
 }
 
 DiamondTrap::DiamondTrap( std::string name ) : ClapTrap(name + "_clap_name"), _name(name){
-	_hp = FragTrap::_hp;
-	_maxHP = _hp;
-	_ep = ScavTrap::_ep;
-	_attk = FragTrap::_attk;
+	this->_hp = 100;
+	this->_maxHP = _hp;
+	this->_ep = 50;
+	this->_attk = 30;
 	std::cout << DIA + _name + " constructed." << std::endl;
 }
 
@@ -26,7 +26,7 @@ DiamondTrap::~DiamondTrap( void ){
 
 /*=============== COPY CONSTRUCTOR ===============*/
 
-DiamondTrap::DiamondTrap( const DiamondTrap &copy ) : ClapTrap(copy) {
+DiamondTrap::DiamondTrap( const DiamondTrap &copy ) : ClapTrap(copy), FragTrap(copy), ScavTrap(copy) {
 	*this = copy;
 }
 
