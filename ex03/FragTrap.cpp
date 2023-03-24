@@ -3,18 +3,18 @@
 /*=============== CONSTRUCTOR ===============*/
 
 FragTrap::FragTrap( void ) : ClapTrap() {
-	_hp = 101;
-	_maxHP = _hp;
-	_ep = 100;
-	_attk = 30;
+	this->_hp = 101;
+	this->_maxHP = this->_hp;
+	this->_ep = 100;
+	this->_attk = 30;
 	std::cout << FRAG + _name + " constructed." << std::endl;
 }
 
 FragTrap::FragTrap( std::string name ) : ClapTrap(name){
-	_hp = 100;
-	_maxHP = _hp;
-	_ep = 100;
-	_attk = 30;
+	this->_hp = 101;
+	this->_maxHP = this->_hp;
+	this->_ep = 100;
+	this->_attk = 30;
 	std::cout << FRAG + _name + " constructed." << std::endl;
 }
 

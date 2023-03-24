@@ -2,15 +2,11 @@
 /*=============== CONSTRUCTOR ===============*/
 
 DiamondTrap::DiamondTrap( void ) : ClapTrap("nameless_clap_name"), _name("nameless") {
-	this->_hp = FragTrap::_hp;
+	this->_hp = 100;
 	this->_maxHP = _hp;
-	this->_ep = ScavTrap::_ep;
-	this->_attk = FragTrap::_attk;
+	this->_ep = 50;
+	this->_attk = 30;
 
-	std::cout << "Diamond ATTK = " << DiamondTrap::_attk << std::endl;
-	std::cout << "Diamond EP = " << DiamondTrap::_ep << std::endl;
-	std::cout << "Diamond HP = " << DiamondTrap::_ep << std::endl;
-	std::cout << "HP: " << _hp << "\nEP: " << _ep << "\nATTK: " << _attk << std::endl;
 	std::cout << DIA << _name + " constructed." << std::endl;
 }
 
@@ -53,6 +49,6 @@ void DiamondTrap::attack( const std::string &target ){
 }
 
 void DiamondTrap::whoAmI( void ){
-	std::cout << "I am DiamondTrap " + _name + " of ClapTrap " + ClapTrap::_name + "."
+	std::cout << "I am " << DIA + _name + " of "  << CLAP + ClapTrap::_name + "."
 			<< std::endl;
 }

@@ -3,7 +3,6 @@
 #define SCAVTRAP_HPP
 
 #include "ClapTrap.hpp"
-
 #define SCAV "\033[33mSCAVTRAP \033[0m"
 
 class ScavTrap : virtual public ClapTrap {

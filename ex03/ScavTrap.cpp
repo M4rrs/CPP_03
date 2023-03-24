@@ -3,18 +3,18 @@
 /*=============== CONSTRUCTOR ===============*/
 
 ScavTrap::ScavTrap( void ) : ClapTrap() {
-	_hp = 100;
-	_maxHP = _hp;
-	_ep = 50;
-	_attk = 20;
+	this->_hp = 100;
+	this->_maxHP = this->_hp;
+	this->_ep = 50;
+	this->_attk = 20;
 	std::cout << SCAV + _name + " constructed." << std::endl;
 }
 
 ScavTrap::ScavTrap( std::string name ) : ClapTrap(name){
-	_hp = 100;
-	_maxHP = _hp;
-	_ep = 50;
-	_attk = 20;
+	this->_hp = 100;
+	this->_maxHP = this->_hp;
+	this->_ep = 50;
+	this->_attk = 20;
 	std::cout << SCAV + _name + " constructed." << std::endl;
 }
 
